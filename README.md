@@ -197,7 +197,8 @@ Auth: API_KEY_HERE
 ## 3.4 Hash Lookup API
 
 Use this endpoint to search our cracked password hash database for corresponding plaintext passwords or vice versa. It supports the search types "hash" and "password".
-Required Parameters:
+
+**Required Parameters:**
 
 * terms (array of strings)
 
