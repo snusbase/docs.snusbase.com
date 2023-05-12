@@ -264,6 +264,7 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 const snusbaseAuth = 'API_KEY_HERE'
 const snusbaseAPI = 'https://api.snusbase.com/'
 
+// Re-usable function for the Snusbase API
 const sendRequest = async function (url, body = false) {
   const options = {
     method: (body) ? 'POST' : 'GET',
@@ -320,6 +321,7 @@ import requests
 snusbase_auth = 'API_KEY_HERE'
 snusbase_api = 'https://api.snusbase.com/'
 
+# Re-usable function for the Snusbase API
 def send_request(url, body=None):
     headers = {
         'Auth': snusbase_auth,
