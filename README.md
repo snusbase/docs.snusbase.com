@@ -2,8 +2,6 @@
 
 1. [Getting Started](#1-getting-started)
 2. [Authentication](#2-authentication)
-    - [Normal API Users](#normal-api-users)
-    - [Paid API Users](#paid-api-users)
 3. [Endpoints](#3-endpoints)
     - [3.1 Database Search API](#31-database-search-api)
     - [3.2 Database Statistics](#32-database-statistics)
