@@ -1,4 +1,4 @@
-# Table of Contents
+# Snusbase API Documentaton
 
 1. [Getting Started](#1-getting-started)
 2. [Authentication](#2-authentication)
