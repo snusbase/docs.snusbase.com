@@ -23,13 +23,13 @@ For regular subscribers of Snusbase.com, you'll need to include an 'Auth' header
 
 **Normal API Users**
 
-```
+```shell
 Auth: sb[...]
 ```
 
 **Paid API Users**
 
-```
+```shell
 Authorization: Bearer API_KEY_HERE
 ```
 
@@ -53,7 +53,7 @@ This endpoint lets you search the Snusbase database for leaked information, like
 
 **Curl**
 
-```
+```shell
 curl --request POST --url https://api.snusbase.com/data/search \
 --header "Auth: ACTIVATION_CODE" --header "Content-Type: application/json" \
 --data '{"terms":["example@gmail.com"], "types":["email"], "wildcard": false}'
@@ -61,7 +61,7 @@ curl --request POST --url https://api.snusbase.com/data/search \
 
 **Request**
 
-```
+```shell
 POST https://api.snusbase.com/data/search
 Content-Type: application/json
 Auth: API_KEY_HERE
@@ -107,13 +107,13 @@ Get the current databases imported in our main (non-combolist) search engine, as
 
 **Curl**
 
-```
+```shell
 curl https://api.snusbase.com/data/stats
 ```
 
 **Request**
 
-```
+```shell
 GET https://api.snusbase.com/data/stats
 ```
 
@@ -149,7 +149,7 @@ GET https://api.snusbase.com/data/stats
 
 **Curl**
 
-```
+```shell
 curl --request POST --url https://api.snusbase.com/tools/ip-whois \
 --header "Auth: ACTIVATION_CODE" --header "Content-Type: application/json" \
 --data '{"terms":["12.34.56.78", "127.0.0.1"]}'
@@ -157,7 +157,7 @@ curl --request POST --url https://api.snusbase.com/tools/ip-whois \
 
 **Request**
 
-```
+```shell
 POST https://api.snusbase.com/tools/ip-whois
 Content-Type: application/json
 Auth: API_KEY_HERE
@@ -209,7 +209,7 @@ Required Parameters:
 
 **Curl**
 
-```
+```shell
 curl --request POST --url https://api.snusbase.com/tools/hash-lookup \
 --header "Auth: ACTIVATION_CODE" --header "Content-Type: application/json" \
 --data '{"terms":["482c811da5d5b4bc6d497ffa98491e38"]}'
@@ -217,7 +217,7 @@ curl --request POST --url https://api.snusbase.com/tools/hash-lookup \
 
 **Request**
 
-```
+```shell
 POST https://api.snusbase.com/tools/hash-lookup
 Content-Type: application/json
 Auth: API_KEY_HERE
@@ -254,7 +254,7 @@ If you're using a NodeJS version older than NodeJS 18, you'll need to run:
 
 And then add the following line to the very top of the file:
 
-```
+```js
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 ```
 
