@@ -63,6 +63,8 @@ curl --request POST --url https://api.snusbase.com/data/search \
 
 ```
 POST https://api.snusbase.com/data/search
+Content-Type: application/json
+Auth: API_KEY_HERE
 {
   "terms": [ "example@gmail.com" ],
   "types": [ "email" ],
@@ -157,6 +159,8 @@ curl --request POST --url https://api.snusbase.com/tools/ip-whois \
 
 ```
 POST https://api.snusbase.com/tools/ip-whois
+Content-Type: application/json
+Auth: API_KEY_HERE
 {
   "terms": [ "12.34.56.78", "127.0.0.1" ]
 }
@@ -215,6 +219,8 @@ curl --request POST --url https://api.snusbase.com/tools/hash-lookup \
 
 ```
 POST https://api.snusbase.com/tools/hash-lookup
+Content-Type: application/json
+Auth: API_KEY_HERE
 {
   "terms":["482c811da5d5b4bc6d497ffa98491e38"]
 }
