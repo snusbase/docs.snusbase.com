@@ -1,4 +1,4 @@
-# Snusbase API Docs
+# Table of Contents
 
 1. [Getting Started](#1-getting-started)
 2. [Authentication](#2-authentication)
@@ -74,7 +74,7 @@ Auth: API_KEY_HERE
 
 **Example Response**
 
-```
+```js
 {
   "took": 291,
   "size": 1038,
@@ -119,7 +119,7 @@ GET https://api.snusbase.com/data/stats
 
 **Example Response**
 
-```
+```js
 {
   "rows": 16165424269,
   "tables": {
@@ -168,7 +168,7 @@ Auth: API_KEY_HERE
 
 **Example Response**
 
-```
+```js
 {
   "size": 1,
   "results": {
@@ -228,7 +228,7 @@ Auth: API_KEY_HERE
 
 **Example Response**
 
-```
+```js
 {
   "found":true,
   "password":"password123",
@@ -260,7 +260,7 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 
 **Code**
 
-```
+```js
 const snusbaseAuth = 'API_KEY_HERE'
 const snusbaseAPI = 'https://api.snusbase.com/'
 
@@ -313,7 +313,7 @@ Very simple code example showing the usage of Snusbase's API with Python.
 
 **Code**
 
-```
+```python
 import json
 import requests
 
