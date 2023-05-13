@@ -170,6 +170,7 @@ Auth: API_KEY_HERE
 
 ```js
 {
+  "took": 108,
   "size": 1,
   "results": {
     "12.34.56.78": {
