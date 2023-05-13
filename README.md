@@ -201,10 +201,10 @@ Use this endpoint to search our cracked password hash database for corresponding
 **Required Parameters:**
 
 * terms (array of strings)
+* types (array of strings)
 
 **Optional Parameters:**
 
-* types (array of strings)
 * wildcard (boolean: true/false)
 
 
@@ -213,7 +213,7 @@ Use this endpoint to search our cracked password hash database for corresponding
 ```shell
 curl --request POST --url https://api.snusbase.com/tools/hash-lookup \
 --header "Auth: ACTIVATION_CODE" --header "Content-Type: application/json" \
---data '{"terms":["482c811da5d5b4bc6d497ffa98491e38"]}'
+--data '{"terms":["482c811da5d5b4bc6d497ffa98491e38"],"types":["hash]}'
 ```
 
 **Request**
@@ -223,7 +223,8 @@ POST https://api.snusbase.com/tools/hash-lookup
 Content-Type: application/json
 Auth: API_KEY_HERE
 {
-  "terms":["482c811da5d5b4bc6d497ffa98491e38"]
+  "terms":["482c811da5d5b4bc6d497ffa98491e38"],
+  "types": ["hash"]
 }
 ```
 
@@ -231,9 +232,16 @@ Auth: API_KEY_HERE
 
 ```js
 {
-  "found":true,
-  "password":"password123",
-  "term":"482c811da5d5b4bc6d497ffa98491e38"
+  "took": 57,
+  "size": 1,
+  "results": {
+    "0001_HASHES_ORG_1913M_2021": [
+      {
+        "hash": "482c811da5d5b4bc6d497ffa98491e38",
+        "password": "password123"
+      }
+    ]
+  }
 }
 ```
 
