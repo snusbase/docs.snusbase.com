@@ -54,7 +54,7 @@ This endpoint lets you search the Snusbase database for leaked information, like
 **Curl**
 
 ```shell
-curl --request POST --url https://api.snusbase.com/data/search \
+curl --request POST --url https://api-experimental.snusbase.com/data/search \
 --header "Auth: ACTIVATION_CODE" --header "Content-Type: application/json" \
 --data '{"terms":["example@gmail.com"], "types":["email"], "wildcard": false}'
 ```
@@ -62,7 +62,7 @@ curl --request POST --url https://api.snusbase.com/data/search \
 **Request**
 
 ```shell
-POST https://api.snusbase.com/data/search
+POST https://api-experimental.snusbase.com/data/search
 Content-Type: application/json
 Auth: API_KEY_HERE
 {
@@ -108,13 +108,13 @@ Get the current databases imported in our main (non-combolist) search engine, as
 **Curl**
 
 ```shell
-curl https://api.snusbase.com/data/stats
+curl https://api-experimental.snusbase.com/data/stats
 ```
 
 **Request**
 
 ```shell
-GET https://api.snusbase.com/data/stats
+GET https://api-experimental.snusbase.com/data/stats
 ```
 
 **Example Response**
@@ -150,7 +150,7 @@ GET https://api.snusbase.com/data/stats
 **Curl**
 
 ```shell
-curl --request POST --url https://api.snusbase.com/tools/ip-whois \
+curl --request POST --url https://api-experimental.snusbase.com/tools/ip-whois \
 --header "Auth: ACTIVATION_CODE" --header "Content-Type: application/json" \
 --data '{"terms":["12.34.56.78", "127.0.0.1"]}'
 ```
@@ -158,7 +158,7 @@ curl --request POST --url https://api.snusbase.com/tools/ip-whois \
 **Request**
 
 ```shell
-POST https://api.snusbase.com/tools/ip-whois
+POST https://api-experimental.snusbase.com/tools/ip-whois
 Content-Type: application/json
 Auth: API_KEY_HERE
 {
@@ -212,7 +212,7 @@ Use this endpoint to search our cracked password hash database for corresponding
 **Curl**
 
 ```shell
-curl --request POST --url https://api.snusbase.com/tools/hash-lookup \
+curl --request POST --url https://api-experimental.snusbase.com/tools/hash-lookup \
 --header "Auth: ACTIVATION_CODE" --header "Content-Type: application/json" \
 --data '{"terms":["482c811da5d5b4bc6d497ffa98491e38"],"types":["hash]}'
 ```
@@ -220,7 +220,7 @@ curl --request POST --url https://api.snusbase.com/tools/hash-lookup \
 **Request**
 
 ```shell
-POST https://api.snusbase.com/tools/hash-lookup
+POST https://api-experimental.snusbase.com/tools/hash-lookup
 Content-Type: application/json
 Auth: API_KEY_HERE
 {
@@ -272,7 +272,7 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 
 ```js
 const snusbaseAuth = 'API_KEY_HERE'
-const snusbaseAPI = 'https://api.snusbase.com/'
+const snusbaseAPI = 'https://api-experimental.snusbase.com/'
 
 // Re-usable function for the Snusbase API
 const sendRequest = async function (url, body = false) {
@@ -329,7 +329,7 @@ import json
 import requests
 
 snusbase_auth = 'API_KEY_HERE'
-snusbase_api = 'https://api.snusbase.com/'
+snusbase_api = 'https://api-experimental.snusbase.com/'
 
 # Re-usable function for the Snusbase API
 def send_request(url, body=None):
