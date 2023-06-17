@@ -214,7 +214,7 @@ Use this endpoint to search our cracked password hash database for corresponding
 ```shell
 curl --request POST --url https://api-experimental.snusbase.com/tools/hash-lookup \
 --header "Auth: ACTIVATION_CODE" --header "Content-Type: application/json" \
---data '{"terms":["482c811da5d5b4bc6d497ffa98491e38"],"types":["hash]}'
+--data '{"terms":["482c811da5d5b4bc6d497ffa98491e38"],"types":["hash"]}'
 ```
 
 **Request**
