@@ -1,12 +1,12 @@
 # Privacy Policy
 
-Effective Date: June 12th, 2023, not yet modified.
+Effective Date: June 12th, 2023. Modified July 1st, 2023.
 
 Welcome! This Privacy Policy explains how we, Snusbase.com (also referred to as "we", "us", "our"), collect, use, and protect your personal information when you use our Data Breach Search Engine and related services (collectively referred to as “Services”).
 
 ## 1. Collection of Personal Information
 
-We collect the following personal information when you use our Services: your email address, username, and last sign-in time. During your use of our Services, we may also log specific information related to your searches, including the time a search was made, the user account that made it, and the duration of the search. This log is kept for a period of exactly 5 minutes before it is deleted and overwritten.
+We collect the following personal information when you use our Services: your email address, username, and account creation time. During your use of our Services, we may also temporarily log specific information related to your searches, including the time a search was made, the user account that made it, the amount of results your search got, and the duration of the search. This log is kept for a period of exactly 5 minutes before it is permanently deleted.
 
 ## 2. Use of Personal Information
 
@@ -22,7 +22,7 @@ We employ robust security measures to protect your personal information from una
 
 ## 5. Retention of Personal Information
 
-Your personal information is retained for as long as necessary to provide our Services and comply with legal obligations. Note, however, that search log information is kept for a period of exactly 5 minutes before it is deleted and overwritten.
+Your personal information is retained for as long as necessary to provide our Services and comply with legal obligations.
 
 ## 6. Warrant Canary
 
