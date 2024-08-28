@@ -1,20 +1,22 @@
 # Terms of Service
 
-Effective Date: March 24, 2023, not yet modified.
+Effective Date: March 24, 2023
 
-Welcome! By accessing or using our Data Breach Search Engine and related services (collectively referred to as "Services"), you agree to comply with and be bound by the following Terms of Service Agreement (the "Agreement"). Please read this Agreement carefully before accessing or using our Services.
+Last Modified: August 28, 2024
+
+Welcome to Snusbase! By accessing or using our platform and related services (collectively referred to as "Services"), you agree to comply with and be bound by the following Terms of Service Agreement (the "Agreement"). Please read this Agreement carefully before accessing or using our Services.
 
 ## 1. Definitions
 
 In this Agreement, the following terms shall have the meanings set out below:
 
-* a. "Data Breach Search Engine" refers to the Services provided by Snusbase.com, which allows users to search for compromised data from publicly available data breaches.
+* a. "Services" refers to the Snusbase platform, including our data breach search functionality and all related services provided by Snusbase.com.
 * b. "Personal Information" refers to any information that can be used to identify a specific individual, including but not limited to name, email address, home address, and phone number.
 * c. "User" or "You" refers to any individual or entity that accesses or uses our Services.
 
 ## 2. Prohibited Uses
 
-You agree not to use our Data Breach Search Engine for any unlawful, unethical, or malicious purposes, including but not limited to:
+You agree not to use our Services for any unlawful, unethical, or malicious purposes, including but not limited to:
 
 * a. Engaging in, promoting, or supporting any form of illegal activity, such as hacking, fraud, or identity theft.
 * b. Distributing, sharing, or selling personal or sensitive information obtained from our Services without the explicit consent of the affected individuals.
@@ -22,10 +24,11 @@ You agree not to use our Data Breach Search Engine for any unlawful, unethical, 
 * d. Exploiting vulnerabilities, attempting to gain unauthorized access, or disrupting the operation of our Services or any third-party systems.
 * e. Violating the privacy or intellectual property rights of any individual or entity.
 * f. Using our Services in a manner that may cause harm or damage to our reputation or the reputation of any third parties associated with us.
+* g. Using any automated means, such as bots, crawlers, or scrapers, to access, collect, or harvest data from our Services without our express written permission.
 
 ## 3. Age Requirement
 
-You must be at least 18 years old, or the age of majority in your jurisdiction, to use our Data Breach Search Engine. By using our Services, you represent and warrant that you meet this age requirement. We reserve the right to terminate or suspend your access to our Services if we have reason to believe you do not meet this requirement.
+You must be at least 18 years old, or the age of majority in your jurisdiction, to use our Services. By using our Services, you represent and warrant that you meet this age requirement. We reserve the right to terminate or suspend your access to our Services if we have reason to believe you do not meet this requirement.
 
 ## 4. Termination
 
@@ -37,11 +40,11 @@ We reserve the right to modify or update this Agreement at any time. Your contin
 
 ## 6. Data Protection and Privacy
 
-By using our Services, you acknowledge that you have read and understood our [Privacy Policy](https://docs.snusbase.com/privacy-policy), which outlines how we collect, use, and protectyour personal information. You agree to the practices described in our Privacy Policy and consent to the processing of your personal information in accordance with its terms.
+By using our Services, you acknowledge that you have read and understood our Privacy Policy, which outlines how we collect, use, and protect your personal information. You agree to the practices described in our Privacy Policy and consent to the processing of your personal information in accordance with its terms.
 
 ## 7. No Warranty
 
-Our Data Breach Search Engine is provided on an "as is" and "as available" basis, without any warranties of any kind, whether express, implied, or statutory, including, but not limited to, warranties of merchantability, fitness for a particular purpose, non-infringement, or any warranties arising out of course of dealing or usage of trade. We do not warrant that our Services will be uninterrupted, timely, secure, error-free, or that any defects will be corrected.
+Our Services are provided on an "as is" and "as available" basis, without any warranties of any kind, whether express, implied, or statutory, including, but not limited to, warranties of merchantability, fitness for a particular purpose, non-infringement, or any warranties arising out of course of dealing or usage of trade. We do not warrant that our Services will be uninterrupted, timely, secure, error-free, or that any defects will be corrected.
 
 ## 8. Limitation of Liability
 
@@ -53,7 +56,7 @@ You agree to indemnify, defend, and hold harmless Snusbase.com, its affiliates, 
 
 ## 10. Compliance with Laws
 
-You agree to comply with all applicable laws, rules, and regulations in connection with your use of our Data Breach Search Engine, including but not limited to local, national, and international laws regarding data protection, privacy, and the transmission of technical data.
+You agree to comply with all applicable laws, rules, and regulations in connection with your use of our Services, including but not limited to local, national, and international laws regarding data protection, privacy, and the transmission of technical data.
 
 ## 11. Export Compliance
 
@@ -61,7 +64,7 @@ You acknowledge that our Services may be subject to export control laws and regu
 
 ## 12. Third-Party Content and Services
 
-Our Data Breach Search Engine may contain links to third-party websites or services that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You acknowledge and agree that we shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such third-party content, goods, or services.
+Our Services may contain links to third-party websites or services that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You acknowledge and agree that we shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such third-party content, goods, or services.
 
 ## 13. Governing Law and Jurisdiction
 
@@ -75,4 +78,4 @@ If any provision of this Agreement is found to be unenforceable or invalid under
 
 This Agreement constitutes the entire understanding and agreement between you and us with respect to the subject matter hereof and supersedes all prior and contemporaneous agreements, representations, and understandings, whether oral or written.
 
-By using our Data Breach Search Engine, you acknowledge that you have read, understood, and agree to be bound by this Agreement. If you do not agree with any of the terms herein, please do not use our Services.
+By using our Services, you acknowledge that you have read, understood, and agree to be bound by this Agreement. If you do not agree with any of the terms herein, please do not use our Services.
