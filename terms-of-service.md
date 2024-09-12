@@ -40,7 +40,7 @@ We reserve the right to modify or update this Agreement at any time. Your contin
 
 ## 6. Data Protection and Privacy
 
-By using our Services, you acknowledge that you have read and understood our Privacy Policy, which outlines how we collect, use, and protect your personal information. You agree to the practices described in our Privacy Policy and consent to the processing of your personal information in accordance with its terms.
+By using our Services, you acknowledge that you have read and understood our [Privacy Policy](https://docs.snusbase.com/privacy-policy), which outlines how we collect, use, and protect your personal information. You agree to the practices described in our [Privacy Policy](https://docs.snusbase.com/privacy-policy) and consent to the processing of your personal information in accordance with its terms.
 
 ## 7. No Warranty
 
