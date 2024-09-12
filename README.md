@@ -269,7 +269,7 @@ POST https://api.snusbase.com/data/search
 
 ### 4.4 Search With Wildcard
 
-Our wildcard characters are "%", meaning any character or none at all, and "_" representing exactly one character. As of now wildcard characters cannot be the first character in a search term. If you need domain searches, use the "_domain" search type.
+Our wildcard characters are "%", meaning any amount of any characters or none at all, and "_" representing exactly one character. As of now wildcard characters cannot be the first character in a search term. If you need domain searches, use the "_domain" search type.
 
 You can escape wildcard characters by prepending them with a backslash ("\\").
 
