@@ -216,7 +216,7 @@ Search for corresponding plaintext passwords or vice versa in the cracked passwo
 | `terms`    | Array of strings    | Yes      | Hashes or passwords to look up.                                                                                                                                     |
 | `types`    | Array of strings    | Yes      | Types of lookup. Possible values: `"hash"`, `"password"`.                                                                                                           |
 | `wildcard` | Boolean             | No       | Enable wildcard search.                                                                                                                                             |
-| `group_by` | Boolean or string   | No       | Group results. Defaults to `"db"`. Set to `"false"` to disable grouping.                                                                                            |
+| `group_by` | Boolean or string   | No       | Group results. Defaults to `"db"`. Set to `false` to disable grouping.                                                                                            |
 | `tables`   | Array of strings    | No       | Limit search to specific tables.                                                                                                                                    |
 
 #### Request Example
@@ -294,7 +294,7 @@ Supported columns to group by include:
 
 If a result doesn't have the column you want to group by, it will be appended to the `NO_{GROUP_BY}` object. For example, if you group by `"email"` but a result doesn't have an email column, it can be found in `NO_EMAIL`.
 
-By default, the value of `group_by` is `"db"`, but you can turn this off by setting `group_by` to `"false"`.
+By default, the value of `group_by` is `"db"`, but you can turn this off by setting `group_by` to `false`.
 
 #### Request Example
 
