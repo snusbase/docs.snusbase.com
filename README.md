@@ -436,7 +436,7 @@ To ensure fair usage and prevent abuse, the API implements rate limiting. Curren
 - **`/data/search`**: 2,048 requests every 12 hours.
 - **All other endpoints**: 512 requests per minute.
 
-If you exceed these limits, you'll receive a **429 Too Many Requests** response. The response headers include information about your remaining quota and reset time via `X-RateLimit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset`. These limits are subject to change, so it's advisable to implement these headers in your application logic.
+If you exceed these limits, you'll receive a **429 Too Many Requests** response. The response headers include information about your remaining quota and reset time via `X-Rate-Limit`, `X-Rate-Limit-Remaining`, and `X-Rate-Limit-Reset`. These limits are subject to change, so it's advisable to implement these headers in your application logic.
 
 ## Important Information
 
