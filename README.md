@@ -10,6 +10,7 @@
    - [Combo Lookup](#combo-lookup)
    - [Hash Lookup](#hash-lookup)
    - [IP WHOIS Lookup](#ip-whois-lookup)
+   - [Domain WHOIS Lookup](#domain-whois-lookup)
 4. [Example Search Queries](#example-search-queries)
    - [Multiple Terms and Types](#multiple-terms-and-types)
    - [Search Specific Tables](#search-specific-tables)
@@ -55,7 +56,7 @@ GET https://api.snusbase.com/data/stats
 
 ```json
 {
-  "rows": 18006941078,
+  "rows": 18109138413,
   "tables": {
     "0001_STEALERLOGS_NA_121M_MALWARE_2023": [
       "email", "username", "password", "host", "_domain"
@@ -171,7 +172,7 @@ Auth: YOUR_API_KEY_HERE
   "took": 2.905,
   "size": 1194,
   "results": {
-    "0007_COLLECTION3_COMBOLIST_300M_2019": [
+    "COLLECTION1_1212M_COMBOLIST_2019": [
       {
         "username": "example@gmail.com",
         "password": "0981122847"
@@ -292,6 +293,129 @@ Auth: YOUR_API_KEY_HERE
       "hosting": false
     }
   }
+}
+```
+
+### Domain WHOIS Lookup
+
+Retrieve WHOIS/RDAP information for domain names. Works with gTLDs, ccTLDs, and IDN domains.
+
+- **Endpoint:** `https://api.snusbase.com/tools/domain-whois`
+- **Method:** `POST`
+- **Headers:**
+  - `Content-Type: application/json`
+  - `Auth: YOUR_API_KEY_HERE`
+
+#### Parameters
+
+| Parameter | Type             | Required | Description                                          |
+|-----------|------------------|----------|------------------------------------------------------|
+| `terms`   | Array of strings | Yes      | Domain names to look up (max 100 per request).       |
+
+#### Request Example
+
+```http
+POST https://api.snusbase.com/tools/domain-whois
+Content-Type: application/json
+Auth: YOUR_API_KEY_HERE
+
+{
+  "terms": ["presence.sh", "google.tk", "not8489291real.com"]
+}
+```
+
+#### Response Example
+
+Results are keyed by the input string. Failed lookups (not registered, invalid syntax) go in the top-level `errors` array. Missing fields are omitted from the JSON. ccTLDs often don't return `registrar`, `abuse`, or `dnssec`.
+
+```json
+{
+  "took": 264.706,
+  "size": 2,
+  "results": {
+    "presence.sh": {
+      "domain": "presence.sh",
+      "tld": "sh",
+      "unicode_name": "presence.sh",
+      "registrar": {
+        "name": "Immaterialism Limited",
+        "iana_id": "802672"
+      },
+      "ns": [
+        "colin.ns.cloudflare.com",
+        "dayana.ns.cloudflare.com"
+      ],
+      "status": [
+        "active"
+      ],
+      "dnssec": {
+        "signed": false
+      },
+      "dates": {
+        "created": "2026-01-09T15:22:13.591Z",
+        "updated": "2026-01-14T15:22:58.140Z",
+        "expires": "2027-01-09T15:22:13.591Z"
+      },
+      "registrant": {
+        "org": "Njalla Okta LLC",
+        "state": "Charlestown"
+      },
+      "meta": {
+        "source": "rdap",
+        "server": "https://rdap.identitydigital.services/rdap",
+        "fetched_at": "2026-05-24T21:53:03.326Z"
+      }
+    },
+    "google.tk": {
+      "domain": "google.tk",
+      "tld": "tk",
+      "registrar": {
+        "name": "Markmonitor Inc.",
+        "iana_id": "292",
+        "url": "https://www.markmonitor.com/about-us/",
+        "whois_server": "whois.markmonitor.com"
+      },
+      "ns": [
+        "ns1.google.com",
+        "ns2.google.com",
+        "ns3.google.com",
+        "ns4.google.com"
+      ],
+      "status": [
+        "clientUpdateProhibited",
+        "clientTransferProhibited",
+        "clientDeleteProhibited"
+      ],
+      "dnssec": {
+        "signed": false
+      },
+      "dates": {
+        "created": "2006-02-03T08:00:00.000Z",
+        "updated": "2026-01-29T10:42:27.000Z",
+        "expires": "2027-03-02T00:00:00.000Z"
+      },
+      "registrant": {
+        "name": "REDACTED REGISTRANT",
+        "org": "Google LLC",
+        "email": "REDACTED FOR PRIVACY",
+        "phone": "REDACTED FOR PRIVACY",
+        "street": "REDACTED FOR PRIVACY",
+        "city": "REDACTED FOR PRIVACY",
+        "postal": "REDACTED FOR PRIVACY"
+      },
+      "abuse": {
+        "phone": "+1.2086851750"
+      },
+      "meta": {
+        "source": "rdap",
+        "server": "https://rdap.markmonitor.com/rdap",
+        "fetched_at": "2026-05-24T21:53:03.330Z"
+      }
+    }
+  },
+  "errors": [
+    "not8489291real.com: Domain not found"
+  ]
 }
 ```
 
@@ -418,6 +542,11 @@ sendRequest('tools/hash-lookup', {
 sendRequest('tools/ip-whois', {
   terms: ['12.34.56.78'],
 }).then(response => console.log(response));
+
+// Example: Domain WHOIS Lookup
+sendRequest('tools/domain-whois', {
+  terms: ['google.com', 'bbc.co.uk'],
+}).then(response => console.log(response));
 ```
 
 ### Python
@@ -467,6 +596,12 @@ ip_whois_response = send_request('tools/ip-whois', {
     'terms': ['12.34.56.78'],
 })
 print(ip_whois_response)
+
+# Example: Domain WHOIS Lookup
+domain_whois_response = send_request('tools/domain-whois', {
+    'terms': ['google.com', 'bbc.co.uk'],
+})
+print(domain_whois_response)
 ```
 
 ## Error Handling
