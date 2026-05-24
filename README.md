@@ -249,9 +249,10 @@ Retrieve WHOIS information for IP addresses.
 
 #### Parameters
 
-| Parameter | Type             | Required | Description                  |
-|-----------|------------------|----------|------------------------------|
-| `terms`   | Array of strings | Yes      | IP addresses to look up.     |
+| Parameter  | Type              | Required | Description                                                                                                                                                                                                          |
+|------------|-------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `terms`    | Array of strings  | Yes      | IP addresses to look up.                                                                                                                                                                                              |
+| `group_by` | Boolean or string | No       | When omitted, results are an object keyed by the IP. Set to any field name (e.g. `"country"`, `"isp"`, `"as"`) to get arrays of records grouped by that value, with a `NO_{FIELD}` bucket for records missing it. Set to `false` for a flat array. |
 
 #### Request Example
 
@@ -273,6 +274,7 @@ Auth: YOUR_API_KEY_HERE
   "size": 1,
   "results": {
     "12.34.56.78": {
+      "query": "12.34.56.78",
       "continent": "North America",
       "continentCode": "NA",
       "country": "United States",
@@ -308,9 +310,10 @@ Retrieve WHOIS/RDAP information for domain names. Works with gTLDs, ccTLDs, and 
 
 #### Parameters
 
-| Parameter | Type             | Required | Description                                          |
-|-----------|------------------|----------|------------------------------------------------------|
-| `terms`   | Array of strings | Yes      | Domain names to look up (max 100 per request).       |
+| Parameter  | Type              | Required | Description                                                                                                                                                                          |
+|------------|-------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `terms`    | Array of strings  | Yes      | Domain names to look up (max 100 per request).                                                                                                                                                                                                      |
+| `group_by` | Boolean or string | No       | When omitted, results are an object keyed by the input. Set to any field path (e.g. `"tld"`, `"registrar.name"`, `"registrant.org"`, `"meta.source"`) to get arrays grouped by that value, with a `NO_{FIELD}` bucket for records missing it. Dotted paths walk into nested objects. Set to `false` for a flat array. |
 
 #### Request Example
 
@@ -326,14 +329,13 @@ Auth: YOUR_API_KEY_HERE
 
 #### Response Example
 
-Results are keyed by the input string. Failed lookups (not registered, invalid syntax) go in the top-level `errors` array. Missing fields are omitted from the JSON. ccTLDs often don't return `registrar`, `abuse`, or `dnssec`.
-
 ```json
 {
   "took": 264.706,
   "size": 2,
   "results": {
     "presence.sh": {
+      "query": "presence.sh",
       "domain": "presence.sh",
       "tld": "sh",
       "unicode_name": "presence.sh",
@@ -367,6 +369,7 @@ Results are keyed by the input string. Failed lookups (not registered, invalid s
       }
     },
     "google.tk": {
+      "query": "google.tk",
       "domain": "google.tk",
       "tld": "tk",
       "registrar": {
