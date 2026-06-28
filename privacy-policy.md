@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Effective Date: June 12th, 2023. Last Updated: December 25th, 2025.
+Last Updated: June 28th, 2026.
 
 Welcome. This Privacy Policy explains how we, Snusbase.com (also referred to as "we", "us", or "our"), collect, use, and protect your personal information when you use our Data Breach Search Engine and related services (collectively referred to as the "Services").
 
@@ -19,6 +19,8 @@ During your use of our Services, we may temporarily log limited technical metada
 We do not log, store, record, or retain the actual search terms, query inputs, identifiers searched for, or the content of any search. Search terms and query contents are processed in memory only and remain private to the user.
 
 All search-related metadata logs are retained for a period of exactly five (5) minutes and are then permanently deleted.
+
+For the domain-whois API only, RDAP/WHOIS responses returned for queried domains may be stored in our database to support domain WHOIS lookups at scale. This data remains entirely in-house and cannot be tied back to your account.
 
 ## 2. Use of Personal Information
 
@@ -54,7 +56,7 @@ Subject to applicable laws, you have the right to access, correct, delete, or re
 
 We reserve the right to modify or update this Privacy Policy at any time. Continued use of the Services following any changes constitutes acceptance of the revised Privacy Policy.
 
-For transparency, the current and historical versions of this Privacy Policy and our Terms of Service are publicly hosted on GitHub Pages. Users who wish to monitor changes may follow the repository at [https://github.com/snusbase/docs.snusbase.com](https://github.com/snusbase/docs.snusbase.com) by using the GitHub Watch feature to receive update notifications.
+For transparency, the current and historical versions of this Privacy Policy and our Terms of Service are publicly hosted on GitHub Pages. Users who wish to monitor changes may follow the repository at https://github.com/snusbase/docs.snusbase.com by using the GitHub Watch feature to receive update notifications.
 
 ## 9. Contact Us
 
