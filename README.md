@@ -323,7 +323,7 @@ Content-Type: application/json
 Auth: YOUR_API_KEY_HERE
 
 {
-  "terms": ["presence.sh", "google.tk", "not8489291real.com"]
+  "terms": ["example.org", "presence.sh", "not8489291real.com"]
 }
 ```
 
@@ -334,91 +334,78 @@ Auth: YOUR_API_KEY_HERE
   "took": 264.706,
   "size": 2,
   "results": {
-    "presence.sh": {
-      "query": "presence.sh",
-      "domain": "presence.sh",
-      "tld": "sh",
-      "unicode_name": "presence.sh",
+    "example.org": {
+      "domain": "example.org",
+      "tld": "org",
+      "date": {
+        "created": "1995-08-31T04:00:00Z",
+        "expires": "2026-08-30T04:00:00Z",
+        "updated": "2026-01-16T15:54:51.136Z"
+      },
+      "nameserver": ["katelyn.ns.cloudflare.com", "mitch.ns.cloudflare.com"],
       "registrar": {
-        "name": "Immaterialism Limited",
-        "iana_id": "802672"
+        "name": "icann",
+        "handle": "376"
       },
-      "ns": [
-        "colin.ns.cloudflare.com",
-        "dayana.ns.cloudflare.com"
-      ],
-      "status": [
-        "active"
-      ],
-      "dnssec": {
-        "signed": false
-      },
-      "dates": {
-        "created": "2026-01-09T15:22:13.591Z",
-        "updated": "2026-01-14T15:22:58.140Z",
-        "expires": "2027-01-09T15:22:13.591Z"
-      },
-      "registrant": {
-        "org": "Njalla Okta LLC",
-        "state": "Charlestown"
+      "status": ["serverdeleteprohibited", "servertransferprohibited", "serverupdateprohibited"],
+      "contact": {
+        "abuse": {
+          "email": "cbath@pir.org"
+        }
       },
       "meta": {
-        "source": "rdap",
-        "server": "https://rdap.identitydigital.services/rdap",
-        "fetched_at": "2026-05-24T21:53:03.326Z"
+        "checked": "2026-06-28T14:48:30Z",
+        "updated": "2026-06-20T16:47:39Z",
+        "seen_czds": "2026-06-20T16:47:39Z",
+        "sources": ["czds", "rdap", "dns"]
+      },
+      "dns": {
+        "security": { "signed": false },
+        "records": [
+          { "type": "A", "name": "example.org", "ttl": 113, "values": ["104.20.26.136", "172.66.157.237"] },
+          { "type": "AAAA", "name": "example.org", "ttl": 129, "values": ["2606:4700:10::6814:1a88", "2606:4700:10::ac42:9ded"] },
+          { "type": "MX", "name": "example.org", "ttl": 300, "values": [{ "priority": 0, "server": "." }] },
+          { "type": "TXT", "name": "example.org", "ttl": 300, "values": ["_uyh0vgv5ukyofwj3ddwspnni01vmlyy", "v=spf1 -all"] },
+          { "type": "A", "name": "www.example.org", "ttl": 300, "values": ["104.20.26.136", "172.66.157.237"] },
+          { "type": "AAAA", "name": "www.example.org", "ttl": 300, "values": ["2606:4700:10::6814:1a88", "2606:4700:10::ac42:9ded"] }
+        ]
       }
     },
-    "google.tk": {
-      "query": "google.tk",
-      "domain": "google.tk",
-      "tld": "tk",
+    "presence.sh": {
+      "domain": "presence.sh",
+      "tld": "sh",
+      "date": {
+        "created": "2026-01-09T15:22:13Z",
+        "expires": "2027-01-09T15:22:13Z",
+        "updated": "2026-01-14T15:22:58Z"
+      },
+      "nameserver": ["colin.ns.cloudflare.com", "dayana.ns.cloudflare.com"],
       "registrar": {
-        "name": "Markmonitor Inc.",
-        "iana_id": "292",
-        "url": "https://www.markmonitor.com/about-us/",
-        "whois_server": "whois.markmonitor.com"
+        "name": "immaterialism limited",
+        "handle": "802672"
       },
-      "ns": [
-        "ns1.google.com",
-        "ns2.google.com",
-        "ns3.google.com",
-        "ns4.google.com"
-      ],
-      "status": [
-        "clientUpdateProhibited",
-        "clientTransferProhibited",
-        "clientDeleteProhibited"
-      ],
-      "dnssec": {
-        "signed": false
-      },
-      "dates": {
-        "created": "2006-02-03T08:00:00.000Z",
-        "updated": "2026-01-29T10:42:27.000Z",
-        "expires": "2027-03-02T00:00:00.000Z"
-      },
-      "registrant": {
-        "name": "REDACTED REGISTRANT",
-        "org": "Google LLC",
-        "email": "REDACTED FOR PRIVACY",
-        "phone": "REDACTED FOR PRIVACY",
-        "street": "REDACTED FOR PRIVACY",
-        "city": "REDACTED FOR PRIVACY",
-        "postal": "REDACTED FOR PRIVACY"
-      },
-      "abuse": {
-        "phone": "+1.2086851750"
+      "status": ["ok"],
+      "contact": {
+        "owner": {
+          "organization": "njalla okta llc",
+          "address": "kn"
+        }
       },
       "meta": {
-        "source": "rdap",
-        "server": "https://rdap.markmonitor.com/rdap",
-        "fetched_at": "2026-05-24T21:53:03.330Z"
+        "checked": "2026-06-28T14:48:17Z",
+        "updated": "2026-06-23T10:10:10Z",
+        "sources": ["whois", "dns"]
+      },
+      "dns": {
+        "security": { "signed": false },
+        "records": [
+          { "type": "A", "name": "presence.sh", "ttl": 300, "values": ["104.21.46.130", "172.67.139.8"] },
+          { "type": "AAAA", "name": "presence.sh", "ttl": 300, "values": ["2606:4700:3033::6815:2e82", "2606:4700:3033::ac43:8b08"] }
+        ]
       }
     }
   },
-  "errors": [
-    "not8489291real.com: Domain not found"
-  ]
+  "errors": ["not8489291real.com: Likely not registered"]
 }
 ```
 
@@ -481,7 +468,7 @@ Auth: YOUR_API_KEY_HERE
 
 ### Search with Wildcards
 
-Our wildcard characters are `%` (any number of any characters, including none) and `_` (exactly one character). Wildcard characters cannot be the first character in a search term. If you need domain searches, use the `"_domain"` search type.
+Our wildcard characters are `%` (any number of any characters, including none) and `?` (exactly one character). Wildcard characters cannot be the first character in a search term. If you need domain searches, use the `"_domain"` search type.
 
 You can escape wildcard characters by prepending them with a backslash (`\`).
 
@@ -493,7 +480,7 @@ Content-Type: application/json
 Auth: YOUR_API_KEY_HERE
 
 {
-  "terms": ["exa____@%.tld"],
+  "terms": ["exa????@%.tld"],
   "types": ["email"],
   "wildcard": true
 }
