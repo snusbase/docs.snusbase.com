@@ -7,6 +7,7 @@
 3. [API Endpoints](#api-endpoints)
    - [Database Statistics](#database-statistics)
    - [Database Search](#database-search)
+   - [Database Count](#database-count)
    - [Combo Lookup](#combo-lookup)
    - [Hash Lookup](#hash-lookup)
    - [IP WHOIS Lookup](#ip-whois-lookup)
@@ -130,6 +131,75 @@ Auth: YOUR_API_KEY_HERE
     ],
     /* Other results.. */
   }
+}
+```
+
+### Database Count
+
+Count matching rows in the Snusbase database without returning record contents. By default, the response also includes a per-table count in `results`.
+
+- **Endpoint:** `https://api.snusbase.com/data/count`
+- **Method:** `POST`
+- **Headers:**
+  - `Content-Type: application/json`
+  - `Auth: YOUR_API_KEY_HERE`
+
+#### Parameters
+
+| Parameter         | Type             | Required | Description                                                                                                                            |
+|-------------------|------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------|
+| `terms`           | Array of strings | Yes      | Search terms.                                                                                                                          |
+| `types`           | Array of strings | Yes      | Types of data to search. Possible values: `"email"`, `"username"`, `"lastip"`, `"password"`, `"hash"`, `"name"`, `"_domain"`.         |
+| `wildcard`        | Boolean          | No       | Enable wildcard search (`true` or `false`).                                                                                            |
+| `tables`          | Array of strings | No       | Limit search to specific tables.                                                                                                       |
+| `include_results` | Boolean          | No       | Include the per-table `results` count map. Defaults to `true`. Set to `false` to return only `took` and `size`.                        |
+
+#### Request Example
+
+```http
+POST https://api.snusbase.com/data/count
+Content-Type: application/json
+Auth: YOUR_API_KEY_HERE
+
+{
+  "terms": ["example@gmail.com"],
+  "types": ["email"]
+}
+```
+
+#### Response Example
+
+```json
+{
+  "took": 18.591,
+  "size": 1245,
+  "results": {
+    "0001_STEALERLOGS_NA_121M_MALWARE_2023": 51,
+    "0002_BIT_LY_9316K_SOCIAL_052014": 1,
+    "0005_ZING_VN_51M_ENTERTAINMENT_052015": 4,
+    "0012_IMGUR_COM_1753K_SOCIAL_092013": 1,
+    "0025_BITCOINTALK_ORG_499K_CRYPTO_2015": 1,
+    "0065_ICRAFTS_SU_292K_MINECRAFT_2015": 1,
+    "0066_IDRESSUP_COM_2M_GAMING_2016": 1,
+    "0070_DAILYMOTION_COM_87M_ENTERTAINMENT_2017": 1,
+    "0071_JUSTDATE_COM_24M_DATING_2014": 1,
+    "0077_WEHEARTIT_COM_9M_SOCIAL_112013": 1,
+    "0079_HEROESOFNEWERTH_COM_9M_GAMING_2012": 1,
+    "0115_ZOMATO_COM_17M_DATING_052017": 1,
+    "0159_BENDERCRAFT_RU_171K_MINECRAFT_052017": 1,
+    "0195_DESTERIA_COM_26K_MINECRAFT_2017": 1,
+    "0201_DLH_NET_3M_GAMING_2016": 1,
+    /* Other results.. */
+  }
+}
+```
+
+Set `include_results` to `false` to omit the per-table breakdown:
+
+```json
+{
+  "took": 18.591,
+  "size": 1245
 }
 ```
 
@@ -612,6 +682,7 @@ Detailed error messages are provided in the `errors` array in the response body.
 To ensure fair usage and prevent abuse, the API implements rate limiting. Current limits are:
 
 - **`/data/search`**: 2,048 requests every 12 hours.
+- **`/data/count`**: 2,048 requests every 12 hours.
 - **`/tools/combo-lookup`**: 4,096 requests every 12 hours.
 - **All other endpoints**: 256 requests every 2 minutes.
 
