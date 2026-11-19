@@ -44,13 +44,13 @@ Activation codes generated after September 2021 start with `sb` followed by 28 r
 
 Retrieve information about the current databases in the main search engine. This endpoint does not require authentication.
 
-- **Endpoint:** `https://api.snusbase.com/data/stats`
+- **Endpoint:** `https://api.snusbase.ge/data/stats`
 - **Method:** `GET`
 
 #### Request Example
 
 ```http
-GET https://api.snusbase.com/data/stats
+GET https://api.snusbase.ge/data/stats
 ```
 
 #### Response Example
@@ -81,7 +81,7 @@ GET https://api.snusbase.com/data/stats
 
 Search the Snusbase database for leaked information.
 
-- **Endpoint:** `https://api.snusbase.com/data/search`
+- **Endpoint:** `https://api.snusbase.ge/data/search`
 - **Method:** `POST`
 - **Headers:**
   - `Content-Type: application/json`
@@ -100,7 +100,7 @@ Search the Snusbase database for leaked information.
 #### Request Example
 
 ```http
-POST https://api.snusbase.com/data/search
+POST https://api.snusbase.ge/data/search
 Content-Type: application/json
 Auth: YOUR_API_KEY_HERE
 
@@ -138,7 +138,7 @@ Auth: YOUR_API_KEY_HERE
 
 Count matching rows in the Snusbase database without returning record contents. By default, the response also includes a per-table count in `results`.
 
-- **Endpoint:** `https://api.snusbase.com/data/count`
+- **Endpoint:** `https://api.snusbase.ge/data/count`
 - **Method:** `POST`
 - **Headers:**
   - `Content-Type: application/json`
@@ -157,7 +157,7 @@ Count matching rows in the Snusbase database without returning record contents. 
 #### Request Example
 
 ```http
-POST https://api.snusbase.com/data/count
+POST https://api.snusbase.ge/data/count
 Content-Type: application/json
 Auth: YOUR_API_KEY_HERE
 
@@ -207,7 +207,7 @@ Set `include_results` to `false` to omit the per-table breakdown:
 
 Search the combolist database for username/password combinations from large credential dumps.
 
-- **Endpoint:** `https://api.snusbase.com/tools/combo-lookup`
+- **Endpoint:** `https://api.snusbase.ge/tools/combo-lookup`
 - **Method:** `POST`
 - **Headers:**
   - `Content-Type: application/json`
@@ -225,7 +225,7 @@ Search the combolist database for username/password combinations from large cred
 #### Request Example
 
 ```http
-POST https://api.snusbase.com/tools/combo-lookup
+POST https://api.snusbase.ge/tools/combo-lookup
 Content-Type: application/json
 Auth: YOUR_API_KEY_HERE
 
@@ -262,7 +262,7 @@ Auth: YOUR_API_KEY_HERE
 
 Search for corresponding plaintext passwords or vice versa in the cracked password hash database.
 
-- **Endpoint:** `https://api.snusbase.com/tools/hash-lookup`
+- **Endpoint:** `https://api.snusbase.ge/tools/hash-lookup`
 - **Method:** `POST`
 - **Headers:**
   - `Content-Type: application/json`
@@ -280,7 +280,7 @@ Search for corresponding plaintext passwords or vice versa in the cracked passwo
 #### Request Example
 
 ```http
-POST https://api.snusbase.com/tools/hash-lookup
+POST https://api.snusbase.ge/tools/hash-lookup
 Content-Type: application/json
 Auth: YOUR_API_KEY_HERE
 
@@ -311,7 +311,7 @@ Auth: YOUR_API_KEY_HERE
 
 Retrieve WHOIS information for IP addresses.
 
-- **Endpoint:** `https://api.snusbase.com/tools/ip-whois`
+- **Endpoint:** `https://api.snusbase.ge/tools/ip-whois`
 - **Method:** `POST`
 - **Headers:**
   - `Content-Type: application/json`
@@ -327,7 +327,7 @@ Retrieve WHOIS information for IP addresses.
 #### Request Example
 
 ```http
-POST https://api.snusbase.com/tools/ip-whois
+POST https://api.snusbase.ge/tools/ip-whois
 Content-Type: application/json
 Auth: YOUR_API_KEY_HERE
 
@@ -372,7 +372,7 @@ Auth: YOUR_API_KEY_HERE
 
 Retrieve WHOIS/RDAP information for domain names. Works with gTLDs, ccTLDs, and IDN domains.
 
-- **Endpoint:** `https://api.snusbase.com/tools/domain-whois`
+- **Endpoint:** `https://api.snusbase.ge/tools/domain-whois`
 - **Method:** `POST`
 - **Headers:**
   - `Content-Type: application/json`
@@ -388,7 +388,7 @@ Retrieve WHOIS/RDAP information for domain names. Works with gTLDs, ccTLDs, and 
 #### Request Example
 
 ```http
-POST https://api.snusbase.com/tools/domain-whois
+POST https://api.snusbase.ge/tools/domain-whois
 Content-Type: application/json
 Auth: YOUR_API_KEY_HERE
 
@@ -488,7 +488,7 @@ When using multiple types, each type will be applied to all terms, so you don't 
 #### Request Example
 
 ```http
-POST https://api.snusbase.com/data/search
+POST https://api.snusbase.ge/data/search
 Content-Type: application/json
 Auth: YOUR_API_KEY_HERE
 
@@ -505,7 +505,7 @@ You can specify one or multiple tables. This will display all available columns 
 #### Request Example
 
 ```http
-POST https://api.snusbase.com/data/search
+POST https://api.snusbase.ge/data/search
 Content-Type: application/json
 Auth: YOUR_API_KEY_HERE
 
@@ -525,7 +525,7 @@ By default, the value of `group_by` is `"db"`, but you can turn this off by sett
 #### Request Example
 
 ```http
-POST https://api.snusbase.com/data/search
+POST https://api.snusbase.ge/data/search
 Content-Type: application/json
 Auth: YOUR_API_KEY_HERE
 
@@ -545,7 +545,7 @@ You can escape wildcard characters by prepending them with a backslash (`\`).
 #### Request Example
 
 ```http
-POST https://api.snusbase.com/data/search
+POST https://api.snusbase.ge/data/search
 Content-Type: application/json
 Auth: YOUR_API_KEY_HERE
 
@@ -562,7 +562,7 @@ Auth: YOUR_API_KEY_HERE
 
 ```javascript
 const snusbaseAuth = 'YOUR_API_KEY_HERE';
-const snusbaseAPI = 'https://api.snusbase.com/';
+const snusbaseAPI = 'https://api.snusbase.ge/';
 
 const sendRequest = async (url, body = null) => {
   const options = {
@@ -615,7 +615,7 @@ sendRequest('tools/domain-whois', {
 import requests
 
 snusbase_auth = 'YOUR_API_KEY_HERE'
-snusbase_api = 'https://api.snusbase.com/'
+snusbase_api = 'https://api.snusbase.ge/'
 
 def send_request(url, body=None):
     headers = {
@@ -698,6 +698,6 @@ These limits are subject to change, so it's advisable to implement these headers
 
 ## Important Information
 
-- **API Key Security**: Keep your API key confidential and never expose it in client-side code. You are responsible for your API key, and misuse may result in termination per our [Terms of Service](https://docs.snusbase.com/terms-of-service).
+- **API Key Security**: Keep your API key confidential and never expose it in client-side code. You are responsible for your API key, and misuse may result in termination per our [Terms of Service](https://docs.snusbase.ge/terms-of-service).
 
 - **Data Sanitization**: Always sanitize outputs from our API before rendering them in your application. We don't modify much of the data we import, so expect HTML and potential exploits aimed at the third-party websites we import to still be present in some datasets.
